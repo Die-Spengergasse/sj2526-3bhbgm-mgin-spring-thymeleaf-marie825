@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.time.format.DateTimeFormatter;
 
-@Controller
+// Spring Boot macht von der Implementierung eine Instanz und stellt sie uns zur Verfügung, hilft uns sie zum finden
+@Controller     // Controller = Annotation
 @RequestMapping("/patient")
 public class PatientController {
-    private final PatientRepository patientRepository;
+    private final PatientRepository patientRepository;      // lassen wir uns im Konstrukter übergeben
 
     public PatientController(PatientRepository patientRepository) {
         this.patientRepository = patientRepository;
@@ -22,7 +23,7 @@ public class PatientController {
 
     @GetMapping("/list")
     public String patients(Model model) {
-        model.addAttribute("patients", patientRepository.findAll());
+        model.addAttribute("patients", patientRepository.findAll());        // findAll holt alle Patienten aus der Liste und gibt sie aus
         return "patlist";
     }
 

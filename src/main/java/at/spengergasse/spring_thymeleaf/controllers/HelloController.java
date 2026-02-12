@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+// hat keine Abhänglickeiten
+// Steuern geht viel über Annotationen und man sagt welche Methode gerade aufgerufen werden soll
+// Ist die Hallo seite
+// bekommt ein Model übergeben
+
 @Controller
 public class HelloController {
 

@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Entity
 public class Patient {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)       // PK wird automatisch generiert
     private int id;
 
     private String name;

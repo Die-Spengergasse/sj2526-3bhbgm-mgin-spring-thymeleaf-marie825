@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="p : ${patients}">
+            <tr th:each="p : ${patients}">      <!--th:each ist wie ein Foreach schleife-->
                 <td th:text="${p.name}"></td>
                 <td th:text="${p.birth}"></td>
             </tr>
