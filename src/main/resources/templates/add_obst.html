@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new Obst</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <!--hier wird bootstrap verwendet-->
+</head>
+<body>
+<div class="container">
+    <form th:action="@{/obst/add}" th:object="${obst}" method="post">
+        <input type="text" th:field="*{bezeichnung}" class="form-control" placeholder="obst bezeichnung"> <!--in der tabelle steht das was beim placeholder steht und man sagt das es ein text type ist-->
+        Gewicht    <!--Mit dem habe ich das wort dann wirklich in die tabelle bekommen bei der eingabe-->
+        <input type="number" th:field="*{gewicht}" class="form-control" placeholder="obst gewicht"> <!--genau das gleiche wie oben nur sagt man das es ein number type ist -->
+        Preis
+        <input type ="number" th:field="*{preis}" class="form-control" placeholder="obst preis">
+        Haltbar bis
+        <input type ="date" th:field="*{haltbarbis}" class="form-control" placeholder="obst haltbarbis">    <!--Genau das gleiche wie oben-->
+        <input type="submit" class="form-control" value="Save">         <!--Macht den Save Button und macht das man es speichern kann-->
+    </form>
+</div>
+</body>
+</html>

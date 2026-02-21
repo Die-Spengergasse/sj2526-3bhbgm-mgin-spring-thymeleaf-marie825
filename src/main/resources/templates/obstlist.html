@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Obst List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">        <!--Mit diesem Befehl verwendet man Bootstrap-->
+</head>
+<body>
+<div class="container">
+    <table class="table">
+        <thead>     <!--Hier bezeichnet man die Spaltenüberschriften-->
+        <tr>
+            <th>bezeichnung</th>        <!--Hier was dann dort steht-->
+            <th>haltbarbis</th>
+            <th>gewicht</th>
+            <th>preis</th>
+        </tr>
+        </thead>
+        <tbody>     <!--Hier wird für jedes Obst Objekt eine Tabelleinzeile erstellt -->
+        <tr th:each="o : ${obst}">      <!--th:each ist wie ein Foreach schleife-->
+            <td th:text="${o.bezeichnung}"></td>        <!--Füllt jede Zeile mit den Obst-Daten-->
+            <td th:text="${o.haltbarbis}"></td>
+            <td th:text="${o.gewicht}"></td>
+            <td th:text="${o.preis}"></td>
+        </tr>
+        </tbody>    <!--keinzeichnet das ende-->
+
+    </table>
+
+    <p>
+        <a href="/obst/add">new obst</a>        <!--Zu diesem Link navigiert der Browser bei klicken- führt dann zu einem SpringBoot Controller-->
+    </p>
+</div>
+</body>
+</html>

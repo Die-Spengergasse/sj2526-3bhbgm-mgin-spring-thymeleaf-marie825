@@ -8,11 +8,12 @@ public class SpringThymeleafApplication {
 
     public static void main(String[] args)
     {
-        //SpringApplication.run(SpringThymeleafApplication.class, args);
         SpringApplication.run(SpringThymeleafApplication.class, args);
     }
 
-    // Kommentare auch in application.properties,patient,patientrepository,patientcontroller,helloController, index,patlist
+    // Kommentare auch in application.properties,patient,patientrepository,patientcontroller,helloController, index,patlist bzw in allen Seiten mit Obst
+
+
     // Verknpft Instanzen mit einander, findet aber nur sachen die in einem package liegen, in dem sich die main klasse befindet oder auch in einem untergeordneten package
     // Wenn man die im Java Ordner macht findet das dann nicht
     // öffnet eine DB Verbindung automatishc in einem Memory DataBase (wird gespeichert)

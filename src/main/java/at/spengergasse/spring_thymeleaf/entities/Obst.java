@@ -7,12 +7,13 @@ import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 
-@Entity
+@Entity     // Annotation die es zur einer Enitity Klasse macht
 public class Obst
 {
     // id ist die PK und wird generiert
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)     // generiert den PK
+    // Private Attribute
     private int id;
 
     private String bezeichnung;

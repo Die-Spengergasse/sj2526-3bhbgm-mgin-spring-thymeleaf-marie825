@@ -4,19 +4,21 @@
 <!-- Kann Sachen ersetzen-->
 <!-- schickt fertig geänderte Seite zurück an Browser-->
 <!-- MVC -Model View Controller (Konzept was dahinter ist) -->
+
+<!--Ist die Startseite von der Obst Verwaltung-->
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">     <!--aktiviert Thymeleaf-->
 <head>
     <meta charset="UTF-8">
     <title>Greeting</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">      <!--makiert bootstrap als verwendetes-->
 </head>
 <body>
 <div class="container">
-    <h1>Hallo</h1>
-    Datum: <span th:text="${today}"></span>
+    <h1>Obst Verwaltung</h1>        <!--Überschrift-->
+    Datum: <span th:text="${today}"></span>     <!--Gibt das heutige Datum aus-->
     <div>
-        <a href="/patient/list">patient list</a>
+        <a href="/obst/list">obst list</a>       <!-- führt zu den Obst Listen, da stand vorher nur /patient/list, aber da wir die URL geändert haben, muss das hier auch geändert werden-->
     </div>
 </div>
 </body>
