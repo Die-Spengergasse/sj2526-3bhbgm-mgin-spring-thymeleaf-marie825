@@ -54,7 +54,11 @@ public class Obst
         this.haltbarbis = haltbarbis;
     }
 
+    public int getId() {
+        return id;
+    }
 
-
-
+    public void setId(int id) {
+        this.id = id;
+    }
 }

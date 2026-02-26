@@ -22,6 +22,8 @@
             <td th:text="${o.haltbarbis}"></td>
             <td th:text="${o.gewicht}"></td>
             <td th:text="${o.preis}"></td>
+            <td><a th:href="@{/obst/edit(id=${o.id})}">Edit Obst</a></td>
+            <td><a th:href="@{obst/delete(id=${o.id})}">Delete Obst</a><td>
         </tr>
         </tbody>    <!--keinzeichnet das ende-->
 

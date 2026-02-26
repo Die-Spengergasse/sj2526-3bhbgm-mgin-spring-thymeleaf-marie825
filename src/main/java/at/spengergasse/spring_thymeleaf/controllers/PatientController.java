@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.time.format.DateTimeFormatter;
 
 // Spring Boot macht von der Implementierung eine Instanz und stellt sie uns zur Verfügung, hilft uns sie zum finden
+// für Delete einen neuen Endpunkt machen genauso wie für Edit
+
 @Controller     // Controller = Annotation
 @RequestMapping("/patient")
 public class PatientController {

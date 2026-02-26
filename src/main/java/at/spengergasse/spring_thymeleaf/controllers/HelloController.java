@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 // Ist die Hallo seite
 // bekommt ein Model übergeben
 
+
 @Controller
 public class HelloController {
 
