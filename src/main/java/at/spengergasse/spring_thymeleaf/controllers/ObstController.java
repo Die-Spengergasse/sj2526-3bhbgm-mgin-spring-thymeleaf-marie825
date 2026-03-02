@@ -36,17 +36,17 @@ public class ObstController {
     }
 
     @GetMapping("/edit")
-    public String editObst(@RequestParam int id, Model model)
+    public String editObst(@RequestParam int id, Model model)   // liest die ID des zu bearbeitenden Obsts als Request-Parameter und lädt das entsprechende Obst-Objekt aus der Datenbank,um auf der Seite add_obst anzuzeigen
         {
             Obst obst = obstRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid Id: " + id));     // sucht das Obst mit der übergebenen ID in der DB und fügt es dem Model hinzu, damit es dann auf der Website angezeigt werden kann
-            model.addAttribute("obst", obst);
-            return "add_obst";       // gibt die Seite edit_obst zurück
-
+            model.addAttribute("obst", obst);       // fügt das Obst dem Model hinzu, damit es dann auf der Website angezeigt werden kann und auch gespeichert wird
+            return "add_obst";      // gibt die Seite add_obst zurück, damit man das Obst bearbeiten kann
         }
 
-    @GetMapping("/delete")
-    public String deleteObst(Model model, int id) {
+    @GetMapping("/delete")  // reagiert auf die GET-Anfrage an /obst/delete, löscht das Obst mit der übergebenen ID aus der Datenbank und leitet auf die Seite mit der Liste zurück
+    public String deleteObst(@RequestParam int id, Model model)     // hier wird die ID des zu löschenden Obsts als Request-Parameter übergeben, damit es dann gelöscht werden kann
+    {
         obstRepository.deleteById(id);       // löscht das Obst mit der übergebenen ID aus der DB
-        return "redirect:/obst/list";       // leitet auf die Seite mit der Liste zurück
+        return "redirect:/obst/list";      // leitet auf die Seite mit der Liste zurück
     }
 }
